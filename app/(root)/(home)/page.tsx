@@ -4,7 +4,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <p>At Home Page</p>
+      <p className='h2-bold'>At Home Page</p>
       <UserButton afterSignOutUrl='/' />
 
     </div>
