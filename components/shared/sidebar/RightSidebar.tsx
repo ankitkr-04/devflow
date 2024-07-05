@@ -1,45 +1,44 @@
 import RenderTag from "@/components/RenderTag";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const questions = [
   {
     question:
       "What is the difference between a class and an interface in Java?",
-    id: 1,
+    id: "1",
     url: "/question/" + Math.random().toString(36).substring(2, 15),
   },
   {
     question: "Explain the concept of closures in JavaScript.",
-    id: 2,
+    id: "2",
     url: "/question/" + Math.random().toString(36).substring(2, 15),
   },
   {
     question:
       "What is the purpose of a virtual machine in a programming language?",
-    id: 3,
+    id: "3",
     url: "/question/" + Math.random().toString(36).substring(2, 15),
   },
   {
     question: "What is the difference between a compiler and an interpreter?",
-    id: 4,
+    id: "4",
     url: "/question/" + Math.random().toString(36).substring(2, 15),
   },
   {
     question:
       "What is the difference between a shallow copy and a deep copy in Python?",
-    id: 5,
+    id: "5",
     url: "/question/" + Math.random().toString(36).substring(2, 15),
   },
 ];
 
 const tags = [
-  { _id: 1, title: "JavaScript", count: 10 },
-  { _id: 2, title: "Python", count: 5 },
-  { _id: 3, title: "Java", count: 8 },
-  { _id: 4, title: "C++", count: 3 },
-  { _id: 5, title: "C", count: 2 },
+  { _id: '1', title: "JavaScript", count: 10 },
+  { _id: '2', title: "Python", count: 5 },
+  { _id: '3', title: "Java", count: 8 },
+  { _id: '4', title: "C++", count: 3 },
+  { _id: '5', title: "C", count: 2 },
 ];
 
 const RightSidebar = () => {
@@ -77,7 +76,7 @@ const RightSidebar = () => {
           {tags.map((tag) => (
             <RenderTag
               key={tag._id}
-              id={tag._id}
+              _id={tag._id}
               title={tag.title}
               showCount={true}
               totalQuestions={tag.count}

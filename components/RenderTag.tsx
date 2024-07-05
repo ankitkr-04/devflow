@@ -3,20 +3,20 @@ import React from "react";
 import { Badge } from "./ui/badge";
 
 interface RenderTagsProps {
-  id: number;
+  _id: string;
   title: string;
-  totalQuestions: number;
-  showCount: boolean;
+  totalQuestions?: number;
+  showCount?: boolean;
 }
 
 const RenderTag = ({
-  id,
+  _id,
   title,
   totalQuestions,
   showCount,
 }: RenderTagsProps) => {
   return (
-    <Link className="flex-between cursor-pointer gap-2" href={`/tag/${id}`}>
+    <Link className="flex-between cursor-pointer gap-2" href={`/tag/${_id}`}>
       <Badge className="subtle-medium background-light800_dark300 text-light400_light500  rounded-md border-none px-4 py-2 uppercase ">
         {title}
       </Badge>

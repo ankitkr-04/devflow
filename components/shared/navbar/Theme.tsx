@@ -1,6 +1,4 @@
 "use client";
-import { useTheme } from "@/context/ThemeProvider";
-import React from "react";
 import {
   Menubar,
   MenubarContent,
@@ -8,8 +6,9 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import Image from "next/image";
 import { themes } from "@/constants";
+import { useTheme } from "@/context/ThemeProvider";
+import Image from "next/image";
 
 const Theme = () => {
   const { theme, toggleTheme } = useTheme();
@@ -36,7 +35,7 @@ const Theme = () => {
             />
           )}
         </MenubarTrigger>
-        <MenubarContent className="absolute -right-12 mt-3 min-w-[120px] rounded border py-2 dark:border-dark-400 dark:bg-dark-300">
+        <MenubarContent className="absolute -right-12 mt-3 min-w-[120px] rounded border bg-light-900 py-2 dark:border-dark-400 dark:bg-dark-300">
           {themes.map((item) => (
             <MenubarItem
               key={item.value}

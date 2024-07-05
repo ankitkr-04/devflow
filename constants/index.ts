@@ -72,3 +72,4 @@ export const BADGE_CRITERIA = {
     GOLD: 100000
   }
 };
+
